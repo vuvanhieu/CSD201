@@ -13,7 +13,7 @@ class stack{
     
     public void push(int val){
         if(isFull()){
-            Systen.out.println(x:"Stack Overflow");
+            Systen.out.println("Stack Overflow");
         } else {
             top++;
             arr[top] = val;
@@ -22,7 +22,7 @@ class stack{
     
     public int pop(){
         if(isEmpty()){
-            Systen.out.println(x:"Stack Underflow");
+            Systen.out.println("Stack Underflow");
             return 0;
         } else {
             int popValue = arr[top];
@@ -39,7 +39,7 @@ class stack{
     // xem phan tu tren cung
     public int Top(){
         if(isEmpty()){
-            System.out.println(x:"Stack Underflow");
+            System.out.println("Stack Underflow");
             return 0;
         }
         return arr[top];
@@ -48,9 +48,9 @@ class stack{
     // xem cac phan tu trong stack
     void display(){
         if(isEmpty()){
-            System.out.println(x:"Stack is Empty");
+            System.out.println("Stack is Empty");
         } else {
-            System.out.println(x:"All value in the Stack are:");
+            System.out.println("All value in the Stack are:");
             for( int i = top; i>=0; i--){
                 System.out.println(arr[i]);
             }
