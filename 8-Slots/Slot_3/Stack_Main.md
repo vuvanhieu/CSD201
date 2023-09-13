@@ -4,7 +4,7 @@ import java.util.*;
 public class Main{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        System.out.println(s:"Enter size stack:");
+        System.out.println("Enter size stack:");
         int n = sc.nextInt;
         stack st = new stack(n);
         
@@ -13,17 +13,17 @@ public class Main{
         int pos = 0;
         
         while (flag){
-            System.out.println(x:"1. Push item in Stack");
-            System.out.println(x:"2. Pop item out from Stack");
-            System.out.println(x:"3. View Stack");
-            System.out.println(x:"4. Exit");
+            System.out.println("1. Push item in Stack");
+            System.out.println("2. Pop item out from Stack");
+            System.out.println("3. View Stack");
+            System.out.println("4. Exit");
             
-            System.out.println(s:"Enter Choice:");
+            System.out.println("Enter Choice:");
             int choice = sc.nextInt();
             
             switch(choice){
                 case 1:
-                    System.out.print(s:"Enter value:");
+                    System.out.print("Enter value:");
                     val = sc.nextInt();
                     st.push(val);
                     break;
