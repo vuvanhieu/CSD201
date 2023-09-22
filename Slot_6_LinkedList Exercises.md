@@ -54,6 +54,21 @@ class MyList{Node head, tail;
     //8. Tim sinh vien theo ma lop
     Student searchByClassCode(String code){....}
     
+    //10. Chèn một sinh viên vào sau sinh viên đã biết
+    void insertAfter(Student newStudent, Student existStudent){
+        Node current = head;
+        while (current!=null){
+            if(current.info.equals(exitsStudent)){
+                Node newNode = new Node(newStudent, current.next);
+                current.next = newNode;
+                if (current = tail){tail = newNode;}
+                return;
+            }
+            current = current.next;
+        }
+        System.out.println("not Exits")
+    }
+    
 }
 ```
 4. Xây dựng lớp Main để thử nghiệm chương trình
