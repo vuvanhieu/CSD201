@@ -38,6 +38,22 @@ class MyList{Node head, tail;
     void clear(){head = tail = null;}
     //5. Them sinh vien vao cuoi danh sach
     void addLast(Student x){....}
+    //6. Them sinh vien vao dau danh sach
+    void addFirst(Student x){....}
+    //7. Tim sinh vien theo ten
+    Student searchByName(String name){
+        Node current = head;
+        while (current !=null){
+            if (current.info.fullName.equals(name)){
+                return current.info;
+            }
+            current = current.next;
+        }
+        return null;
+    }
+    //8. Tim sinh vien theo ma lop
+    Student searchByClassCode(String code){....}
+    
 }
 ```
 4. Xây dựng lớp Main để thử nghiệm chương trình
@@ -50,6 +66,10 @@ public class Main{
         t.addLast(st1);
         t.addLast(st2);
         t.traversal();
+        //tim sinh vien theo ten
+        String searchName = "Nguyen Van A";
+        Student resultSearchByName = t.searchByName(searchName);
+        
     }
 }
 ```
