@@ -61,7 +61,7 @@ class MyList{Node head, tail;
             if(current.info.equals(exitsStudent)){
                 Node newNode = new Node(newStudent, current.next);
                 current.next = newNode;
-                if (current = tail){tail = newNode;}
+                if (current == tail){tail = newNode;}
                 return;
             }
             current = current.next;
