@@ -195,7 +195,7 @@ public class Main {
 
         System.out.println("Original Student List:");
         studentList.traverse();
-
+        // (7)
         // (8) Remove students with a specific age
         studentList.remove("1990-01-01");
 
