@@ -1,0 +1,78 @@
+class Student {
+    String studentCode;
+    String fullName;
+    String dateOfBirth;
+    String address;
+    String classCode;
+
+    Student() {}
+
+    Student(String code, String name, String dob, String addr, String classCode) {
+        studentCode = code;
+        fullName = name;
+        dateOfBirth = dob;
+        address = addr;
+        this.classCode = classCode;
+    }
+
+    public String toString() {
+        return "(" + studentCode + ", " + fullName + ", " + dateOfBirth + ", " + address + ", " + classCode + ") ";
+    }
+}
+
+class Node {
+    Student info;
+    Node next;
+
+    Node() {}
+
+    Node(Student x, Node q) {
+        info = x;
+        next = q;
+    }
+
+    Node(Student x) {
+        this(x, null);
+    }
+}
+
+public class MyList {
+    Node head, tail;
+
+    MyList() {
+        head = tail = null;
+    }
+
+    boolean isEmpty() {
+        return (head == null);
+    }
+
+    void clear() {
+        head = tail = null;
+    }
+
+    // (1) 
+    void addLast(Student x) {
+        Node q = new Node(x);
+        if (isEmpty()) {
+            head = tail = q;
+            return;
+        }
+        tail.next = q;
+        tail = q;
+    }
+
+    void visit(Node p) {
+        if (p != null)
+            System.out.print(p.info);
+    }
+
+    void traverse() {
+        Node p = head;
+        while (p != null) {
+            visit(p);
+            p = p.next;
+        }
+        System.out.println();
+    }
+  }
