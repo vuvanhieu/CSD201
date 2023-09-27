@@ -51,17 +51,7 @@ public class MyList {
         head = tail = null;
     }
 
-    // (1) 
-    void addLast(Student x) {
-        Node q = new Node(x);
-        if (isEmpty()) {
-            head = tail = q;
-            return;
-        }
-        tail.next = q;
-        tail = q;
-    }
-
+ 
     void visit(Node p) {
         if (p != null)
             System.out.print(p.info);
@@ -74,6 +64,28 @@ public class MyList {
             p = p.next;
         }
         System.out.println();
+    }
+
+   // (1) 
+    void addLast(Student x) {
+        Node q = new Node(x);
+        if (isEmpty()) {
+            head = tail = q;
+            return;
+        }
+        tail.next = q;
+        tail = q;
+    }
+
+ // (2)
+    Node searchByName(String xName) {
+        Node p = head;
+        while (p != null) {
+            if (p.info.fullName.equals(xName))
+                return p;
+            p = p.next;
+        }
+        return null;
     }
 
 void addMany(String[] studentCodes, String[] fullNames, String[] dateOfBirths, String[] addresses, String[] classCodes) {
