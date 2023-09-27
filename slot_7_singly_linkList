@@ -207,11 +207,7 @@ public class Main {
 
         // (10) Get the node at a specific position
         Node nodeAtPosition = studentList.pos(2);
-        if (nodeAtPosition != null) {
-            System.out.println("\nStudent at Position 2: " + nodeAtPosition.info.fullName);
-        } else {
-            System.out.println("\nPosition 2 is out of bounds.");
-        }
+
 
         // (11) Remove a student at a specific position
         studentList.removePos(1);
@@ -239,19 +235,7 @@ public class Main {
 
         // (17) Find the student with the maximum age
         Node maxAgeNode = studentList.findMaxAge();
-        if (maxAgeNode != null) {
-            System.out.println("\nStudent with Maximum Age: " + maxAgeNode.info.fullName);
-        } else {
-            System.out.println("\nNo student found with maximum age.");
-        }
-
-        // (18) Find the student with the minimum age
-        Node minAgeNode = studentList.findMinAge();
-        if (minAgeNode != null) {
-            System.out.println("\nStudent with Minimum Age: " + minAgeNode.info.fullName);
-        } else {
-            System.out.println("\nNo student found with minimum age.");
-        }
+        
 
         // (20) Sort a portion of the list by student ages (from position 1 to 3)
         studentList.sortByAge(1, 3);
