@@ -75,7 +75,14 @@ public class MyList {
         }
         System.out.println();
     }
-  }
+
+void addMany(String[] studentCodes, String[] fullNames, String[] dateOfBirths, String[] addresses, String[] classCodes) {
+        int n = studentCodes.length;
+        for (int i = 0; i < n; i++) {
+            addLast(new Student(studentCodes[i], fullNames[i], dateOfBirths[i], addresses[i], classCodes[i]));
+        }
+    }
+}
 
 
 public class Main {
