@@ -76,3 +76,91 @@ public class MyList {
         System.out.println();
     }
   }
+
+
+public class Main {
+    public static void main(String[] args) {
+        MyList studentList = new MyList();
+
+        // Adding some students to the list
+        studentList.addMany(
+            new String[]{"1", "2", "3", "4", "5"},
+            new String[]{"Alice", "Bob", "Charlie", "David", "Eve"},
+            new String[]{"1990-01-01", "1995-03-15", "1992-07-20", "1998-11-30", "2000-05-10"},
+            new String[]{"123 Main St", "456 Elm St", "789 Oak St", "101 Pine St", "202 Cedar St"},
+            new String[]{"ClassA", "ClassB", "ClassC", "ClassA", "ClassB"}
+        );
+
+        System.out.println("Original Student List:");
+        studentList.traverse();
+
+        // (8) Remove students with a specific age
+        studentList.remove(30);
+
+        // (9) Remove all students with a specific age
+        studentList.removeAll(27);
+
+        System.out.println("\nAfter Removing Students by Age:");
+        studentList.traverse();
+
+        // (10) Get the node at a specific position
+        Node nodeAtPosition = studentList.pos(2);
+        if (nodeAtPosition != null) {
+            System.out.println("\nStudent at Position 2: " + nodeAtPosition.info.fullName);
+        } else {
+            System.out.println("\nPosition 2 is out of bounds.");
+        }
+
+        // (11) Remove a student at a specific position
+        studentList.removePos(1);
+
+        System.out.println("\nAfter Removing Student at Position 1:");
+        studentList.traverse();
+
+        // (12) Sort the list by student names
+        studentList.sortByName();
+
+        System.out.println("\nAfter Sorting by Name:");
+        studentList.traverse();
+
+        // (13) Sort the list by student ages
+        studentList.sortByAge();
+
+        System.out.println("\nAfter Sorting by Age:");
+        studentList.traverse();
+
+        // (16) Reverse the list
+        studentList.reverse();
+
+        System.out.println("\nAfter Reversing the List:");
+        studentList.traverse();
+
+        // (17) Find the student with the maximum age
+        Node maxAgeNode = studentList.findMaxAge();
+        if (maxAgeNode != null) {
+            System.out.println("\nStudent with Maximum Age: " + maxAgeNode.info.fullName);
+        } else {
+            System.out.println("\nNo student found with maximum age.");
+        }
+
+        // (18) Find the student with the minimum age
+        Node minAgeNode = studentList.findMinAge();
+        if (minAgeNode != null) {
+            System.out.println("\nStudent with Minimum Age: " + minAgeNode.info.fullName);
+        } else {
+            System.out.println("\nNo student found with minimum age.");
+        }
+
+        // (20) Sort a portion of the list by student ages (from position 1 to 3)
+        studentList.sortByAge(1, 3);
+
+        System.out.println("\nAfter Sorting a Portion by Age (Position 1 to 3):");
+        studentList.traverse();
+
+        // (21) Reverse a portion of the list (from position 1 to 3)
+        studentList.reverse(1, 3);
+
+        System.out.println("\nAfter Reversing a Portion (Position 1 to 3):");
+        studentList.traverse();
+    }
+}
