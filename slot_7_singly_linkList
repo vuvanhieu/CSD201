@@ -197,10 +197,10 @@ public class Main {
         studentList.traverse();
 
         // (8) Remove students with a specific age
-        studentList.remove(30);
+        studentList.remove("1990-01-01");
 
         // (9) Remove all students with a specific age
-        studentList.removeAll(27);
+        studentList.removeAll("1990-01-01");
 
         System.out.println("\nAfter Removing Students by Age:");
         studentList.traverse();
