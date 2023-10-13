@@ -46,3 +46,11 @@
         }
         return root;
     }
+
+
+private Node findMin(Node node) {
+        while (node.left != null) {
+            node = node.left;
+        }
+        return node;
+}
